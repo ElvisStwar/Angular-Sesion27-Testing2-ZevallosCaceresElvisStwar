@@ -11,6 +11,7 @@ export class AppComponent implements OnInit{
 
   formLogin!:FormGroup;
   enviado!:boolean
+  status:any
 
   constructor(private formBuilder:FormBuilder, private cd:ChangeDetectorRef){}
 
@@ -35,9 +36,9 @@ export class AppComponent implements OnInit{
     
   }
 
-  onSubmit(){
-
-    this.enviado=true
+  boton(){
+    this.enviado=true;
+    this.status='logueado';
     setTimeout(() => {
       this.enviado=false
     }, 1500);

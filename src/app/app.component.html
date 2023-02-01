@@ -1,8 +1,5 @@
 <!-- <router-outlet></router-outlet> -->
-<h1>
-  {{title}}
-</h1>
-  
+ 
 <div *ngIf="formLogin.valid" class="mt-5 text-center"><h3 style="color: rgb(0, 184, 0);">Valido</h3></div>
 <div *ngIf="formLogin.invalid" class="mt-5 text-center"><h3 style="color: rgb(245, 0, 0);">Invalido</h3></div>
 <div class="mt-4 mx-auto bg-body-tertiary border rounded-4" style="width: 300px;">
@@ -26,7 +23,7 @@
         </div>
       </div>
       <div class="text-center d-grid">
-        <button class="btn btn-primary" [disabled]="formLogin.invalid" (click)="onSubmit()">Log In</button>
+        <button class="btn btn-primary" [disabled]="formLogin.invalid" (click)="boton()">Log In</button>
       </div>
     </form>
     <div *ngIf="enviado" class="text-center mt-4"><h4 style="color: rgb(0, 184, 0);"><i class="bi bi-check2-square"></i> Enviado</h4></div>
