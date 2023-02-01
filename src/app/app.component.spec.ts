@@ -53,4 +53,21 @@ describe('AppComponent', () => {
     expect(app.formLogin.invalid).toBeTruthy();
   })
 
+  it('Espero que el formulario sea valido',()=>{
+    const fixture = TestBed.createComponent(AppComponent);
+
+    const app = fixture.componentInstance;
+
+    fixture.detectChanges();
+
+    let formulario = app.formLogin;
+    let username = app.formLogin.controls['username'];
+    let password = app.formLogin.controls['password'];
+
+    username.setValue('elvis.stwar@hotmail.com');
+    password.setValue('123456789');
+    
+    expect(app.formLogin.valid).toBeTruthy();
+  })
+
 });
